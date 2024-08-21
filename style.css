@@ -1,0 +1,101 @@
+:root{
+    --clr-primary-light:#408abe;
+    --clr-dropcolor:rgba(252, 74, 19, 0.952);
+    --white:white;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style-type: none;
+ }
+ a{
+     text-decoration: none;
+     text-transform: capitalize;
+ }
+body{
+    background-color: var(--clr-primary-light) ;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.search-bar{
+    display: flex;
+    background-color: var(--white);
+    align-items: center;
+    min-width: 700px;
+    border-radius: 50px;
+    box-shadow:3px 4px 6px rgba(0, 0, 0, 0.863);
+}
+.dropdown{
+    position: relative;
+    width: 280px;
+    background-color: var(--clr-dropcolor);
+    border: 1px solid var(--white);
+    border-radius: 50px;
+}
+.dropdown-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+}
+.dropdown-list{
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+}
+#list.show{
+    max-height: 300px;
+}
+.dropdown-list-item{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 0 1rem 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: margin-left .2s ease, color .3s ease;
+}
+.dropdown-list-item:hover{
+    margin-left: .5rem;
+    color: var(--clr-dropcolor);
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 1rem;
+}
+.search-box input{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.search-box i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
